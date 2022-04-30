@@ -1,0 +1,66 @@
+const cardContainer = document.querySelector(".events__cards__container");
+console.log(cardContainer);
+
+const events = [
+  {
+    name: "Solo/Group Dance",
+    date: "30 April",
+    society: "Dance",
+    link: "./assets/dance.png",
+  },
+  {
+    name: "Drama",
+    date: "30 April",
+    society: "Drama",
+    link: "./assets/drama.png",
+  },
+  {
+    name: "Painting",
+    date: "30 April",
+    society: "Art",
+    link: "./assets/painting.jpg",
+  },
+  {
+    name: "Solo/Group singing",
+    date: "30 April",
+    society: "singing",
+    link: "./assets/singing.jpg",
+  },
+  {
+    name: "Instrument Playing ",
+    date: "30 April",
+    society: "Skill",
+    link: "./assets/instru.jpg",
+  },
+  {
+    name: "Poetry Recitation",
+    date: "30 April",
+    society: "Poet",
+    link: "./assets/poetry.png",
+  },
+  {
+    name: "Mimicry",
+    date: "30 April",
+    society: "Rangtarangini",
+    link: "./assets/mimicry.png",
+  },
+  {
+    name: "Short Film Making	",
+    date: "30 April",
+    society: "Short film making",
+    link: "./assets/sys.png",
+  },
+];
+
+for (const event of events) {
+  cardContainer.innerHTML += `
+    <div class="events__card" data-society = ${event.society}>
+      <img src="${event.link}" alt="Fusion" />
+      <div class="events__card__content">
+        <h1>${event.name}</h1>
+        <p>Date: ${event.date}</p>
+      </div>
+    </div>
+    
+    `;
+}
